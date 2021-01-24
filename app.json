@@ -1,0 +1,50 @@
+{
+  "name": "Spring",
+  "description": "Spring template project",
+  "keywords": [
+    "java",
+    "spring"
+  ],
+  "website": "",
+  "repository": "https://github.com/xBidi/spring",
+  "logo": "",
+  "success_url": "",
+  "scripts": {},
+  "env": {
+    "POSTGRES_SSL": {
+      "description": "Use ssl with jdbc.",
+      "value": "require"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "image": "heroku/java",
+  "addons": [
+    {
+      "plan": "librato:development",
+      "as": "LIBRATO"
+    },
+    {
+      "plan": "papertrail:choklad",
+      "as": "PAPERTRAIL"
+    },
+    {
+      "plan": "heroku-postgresql:hobby-dev",
+      "as": "POSTGRES"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-java"
+    }
+  ],
+  "environments": {
+    "dev": {},
+    "pre": {},
+    "pro": {}
+  }
+}
